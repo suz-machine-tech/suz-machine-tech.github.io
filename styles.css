@@ -36,6 +36,65 @@ main {
     justify-content: center;
     padding: 40px 20px;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+figure:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+figure:hover figcaption {
+    transform: translateY(0);
+}
+
+/* Hover effect on the video */
+iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
 
 .video-container {
     position: relative;
@@ -57,6 +116,43 @@ main {
 .video-container:hover iframe {
     transform: scale(1.05);
 }
+
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#contact a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #e67e22;
+}
+
 
 /* Animations */
 @keyframes slideUp {
@@ -81,4 +177,80 @@ footer {
 
 footer p {
     font-size: 1rem;
+}
+/* Managing Director Section */
+#managing-director {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.director-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.director-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.director-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.director-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    margin: 40px 0;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+.contact {background-color: #04AA6D;}
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
 }
